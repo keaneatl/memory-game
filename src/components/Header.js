@@ -4,7 +4,10 @@ const Header = ({ title, desc, score, best }) => {
   return (
     <div className="header">
       <h1>{title}</h1>
-      <p>{desc}</p>
+      <p>
+        <i>Instructions: </i>
+        {desc}
+      </p>
 
       <Scoreboard score={score} best={best} />
     </div>

@@ -1,9 +1,13 @@
 import React from "react";
+import CardImage from "./CardImage";
 
-const Card = ({ name, src, alt }) => {
+const Card = ({ name, img }) => {
+  //   const rndGenerator = (min, max) => {
+  //     return Math.floor(Math.random() * max - min + 1) + min;
+  //   };
   return (
     <div>
-      <img src={src} alt={alt}></img>
+      <CardImage img={img} name={name} />
       <h2>{name}</h2>
     </div>
   );

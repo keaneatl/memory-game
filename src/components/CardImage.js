@@ -1,11 +1,7 @@
 import React from "react";
-import { useState } from "react";
 
-const CardImage = () => {
-  const [src, setSrc] = useState();
-  const [alt, setAlt] = useState();
-
-  return <img src={src} alt={alt}></img>;
+const CardImage = ({ img, name }) => {
+  return <img src={img} alt={name}></img>;
 };
 
 export default CardImage;
