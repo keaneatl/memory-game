@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Header from "./components/Header";
-import Scoreboard from "./components/Scoreboard";
 import alekhine from "../src/assets/alekhine.jpeg";
 import anand from "../src/assets/anand.jpeg";
 import botvinnik from "../src/assets/botvinnik.jpeg";
@@ -16,27 +15,57 @@ import steinitz from "../src/assets/steinitz.jpeg";
 import Cards from "./components/Cards";
 
 function App() {
+  const deck = [
+    { name: "Alekhine", img: alekhine, id: 0 },
+    { name: "Anand", img: anand, id: 1 },
+    { name: "Botvinnik", img: botvinnik, id: 2 },
+    { name: "Capablanca", img: capablanca, id: 3 },
+    { name: "Carlsen", img: carlsen, id: 4 },
+    { name: "Fischer", img: fischer, id: 5 },
+    { name: "Karpov", img: karpov, id: 6 },
+    { name: "Kasparov", img: kasparov, id: 7 },
+    { name: "Morphy", img: morphy, id: 8 },
+    { name: "Polgar", img: polgar, id: 9 },
+    { name: "Reshevsky", img: reshevsky, id: 10 },
+    { name: "Steinitz", img: steinitz, id: 11 },
+  ];
   const [score, setScore] = useState(0);
   const [best, setBest] = useState(0);
-  const [cards, setCards] = useState([
-    { name: "Alekhine", img: alekhine },
-    { name: "Anand", img: anand },
-    { name: "Botvinnik", img: botvinnik },
-    { name: "Capablanca", img: capablanca },
-    { name: "Carlsen", img: carlsen },
-    { name: "Fischer", img: fischer },
-    { name: "Karpov", img: karpov },
-    { name: "Kasparov", img: kasparov },
-    { name: "Morphy", img: morphy },
-    { name: "Polgar", img: polgar },
-    { name: "Reshevsky", img: reshevsky },
-    { name: "Steinitz", img: steinitz },
-  ]);
+  const [cards, setCards] = useState(deck);
+  const [clicked, setClicked] = useState([]);
+
+  const onClick = (e) => {
+    if (clicked.some((card) => card === e.currentTarget.textContent)) {
+      alert("You Lose!");
+      setScore(0);
+      setClicked([]);
+      setCards(deck);
+    } else {
+      setClicked(clicked.concat(e.currentTarget.textContent));
+      setScore((score) => score + 1);
+      setCards(
+        cards.map((card, i) => {
+          // get random number with current index as min and next index as max
+          // unless it's the last card
+          let rnd = Math.floor(Math.random() * (i + 1 - i + 1) + i);
+          if (i === cards.length - 1)
+            rnd = Math.floor(Math.random() * (i - i + 1) + i);
+
+          // swap cards
+          let tmp = cards[rnd];
+          cards[rnd] = card;
+          card = tmp;
+          return card;
+        })
+      );
+      if (score >= best) setBest(score + 1);
+    }
+  };
 
   return (
     <div className="main">
       <Header score={score} best={best} />
-      <Cards cards={cards} />
+      <Cards cards={cards} onClick={onClick} />
     </div>
   );
 }

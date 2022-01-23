@@ -3,9 +3,16 @@ import Card from "./Card";
 
 const Cards = ({ cards, onClick }) => {
   return (
-    <div>
+    <div className="cards-container">
       {cards.map((card) => {
-        return <Card name={card.name} img={card.img} />;
+        return (
+          <Card
+            name={card.name}
+            img={card.img}
+            key={card.id}
+            onClick={onClick}
+          />
+        );
       })}
     </div>
   );
