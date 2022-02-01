@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/memory-game/static/css/main.87a0f72e.css",
+    "main.js": "/memory-game/static/js/main.e25540b0.js",
+    "static/js/787.69b12325.chunk.js": "/memory-game/static/js/787.69b12325.chunk.js",
+    "static/media/anand.jpeg": "/memory-game/static/media/anand.b4ac4b64efadf7cf9829.jpeg",
+    "static/media/alekhine.jpeg": "/memory-game/static/media/alekhine.f4d3839feee36463d0c0.jpeg",
+    "static/media/polgar.jpeg": "/memory-game/static/media/polgar.47ee4fd126dba0e98896.jpeg",
+    "static/media/reshevsky.jpeg": "/memory-game/static/media/reshevsky.6d88b3b8bfe722c24605.jpeg",
+    "static/media/botvinnik.jpeg": "/memory-game/static/media/botvinnik.9187164a7c8dd8230f25.jpeg",
+    "static/media/kasparov.jpeg": "/memory-game/static/media/kasparov.690fe0f02a1bb70f2544.jpeg",
+    "static/media/carlsen.jpeg": "/memory-game/static/media/carlsen.d068751c3b4f6ab7081e.jpeg",
+    "static/media/react.gif": "/memory-game/static/media/react.9967cef2517781251744.gif",
+    "static/media/morphy.jpeg": "/memory-game/static/media/morphy.c5cad194a55a65515128.jpeg",
+    "static/media/fischer.jpeg": "/memory-game/static/media/fischer.3e846e808de7b7348692.jpeg",
+    "static/media/karpov.jpeg": "/memory-game/static/media/karpov.807b6d6e3b1063641657.jpeg",
+    "static/media/capablanca.jpeg": "/memory-game/static/media/capablanca.f34e416dd63ea8e90a50.jpeg",
+    "static/media/github.png": "/memory-game/static/media/github.705e116fa980075e0cc6.png",
+    "static/media/steinitz.jpeg": "/memory-game/static/media/steinitz.5ea37fe324ca88f5f9df.jpeg",
+    "index.html": "/memory-game/index.html",
+    "main.87a0f72e.css.map": "/memory-game/static/css/main.87a0f72e.css.map",
+    "main.e25540b0.js.map": "/memory-game/static/js/main.e25540b0.js.map",
+    "787.69b12325.chunk.js.map": "/memory-game/static/js/787.69b12325.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87a0f72e.css",
+    "static/js/main.e25540b0.js"
+  ]
+}
