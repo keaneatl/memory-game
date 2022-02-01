@@ -13,6 +13,7 @@ import polgar from "../src/assets/polgar.jpeg";
 import reshevsky from "../src/assets/reshevsky.jpeg";
 import steinitz from "../src/assets/steinitz.jpeg";
 import Cards from "./components/Cards";
+import Footer from "./components/Footer";
 
 function App() {
   const deck = [
@@ -40,6 +41,11 @@ function App() {
       setScore(0);
       setClicked([]);
       setCards(deck);
+    } else if (score === 12) {
+      alert("You hacked the vault! You win $1,000,000");
+      setScore(0);
+      setClicked([]);
+      setCards(deck);
     } else {
       setClicked(clicked.concat(e.currentTarget.textContent));
       setScore((score) => score + 1);
@@ -64,8 +70,9 @@ function App() {
 
   return (
     <div className="main">
-      <Header score={score} best={best} />
+      <Header title="HACK THE VAULT" score={score} best={best} />
       <Cards cards={cards} onClick={onClick} />
+      <Footer />
     </div>
   );
 }

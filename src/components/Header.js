@@ -3,7 +3,7 @@ import Scoreboard from "./Scoreboard";
 const Header = ({ title, desc, score, best }) => {
   return (
     <div className="header">
-      <h1>{title}</h1>
+      <h1 className="heading">{title}</h1>
       <p>
         <i>Instructions: </i>
         {desc}
@@ -15,7 +15,7 @@ const Header = ({ title, desc, score, best }) => {
 };
 
 Header.defaultProps = {
-  title: "Hack the Vault",
+  title: "HACK THE VAULT",
   desc: "Hack the vault by clicking on an image not more than once",
 };
 export default Header;
